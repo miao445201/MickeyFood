@@ -1,18 +1,18 @@
 //
-//  PostViewController.m
+//  ChartViewController.m
 //  SJFood
 //
-//  Created by 缪宇青 on 15/6/1.
+//  Created by 缪宇青 on 15/6/6.
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "PostViewController.h"
+#import "ChartViewController.h"
 
-@interface PostViewController ()
+@interface ChartViewController ()
 
 @end
 
-@implementation PostViewController
+@implementation ChartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

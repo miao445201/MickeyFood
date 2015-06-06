@@ -1,18 +1,18 @@
 //
-//  TalkingViewController.m
+//  ExpressViewController.m
 //  SJFood
 //
-//  Created by 缪宇青 on 15/6/1.
+//  Created by 缪宇青 on 15/6/6.
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "TalkingViewController.h"
+#import "ExpressViewController.h"
 
-@interface TalkingViewController ()
+@interface ExpressViewController ()
 
 @end
 
-@implementation TalkingViewController
+@implementation ExpressViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

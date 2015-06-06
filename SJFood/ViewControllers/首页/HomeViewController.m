@@ -13,8 +13,8 @@
 #import "HomeModuleView.h"
 #import "MyMessageViewController.h"
 #import "CategoryViewController.h"
-#import "TalkingViewController.h"
-#import "PostViewController.h"
+#import "ChartViewController.h"
+#import "ExpressViewController.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -135,14 +135,14 @@
 
 - (void)PostButtonWithTagNotification:(NSNotification *)notification
 {
-    PostViewController *postViewController = [[PostViewController alloc] initWithNibName:@"PostViewController" bundle:nil];
-    [self.navigationController pushViewController:postViewController animated:YES];
+    ExpressViewController *expressViewController = [[ExpressViewController alloc] initWithNibName:@"ExpressViewController" bundle:nil];
+    [self.navigationController pushViewController:expressViewController animated:YES];
 }
 
 - (void)TalkingButtonWithTagNotification:(NSNotification *)notification
 {
-    TalkingViewController *talkViewController = [[TalkingViewController alloc] initWithNibName:@"TalkingViewController" bundle:nil];
-    [self.navigationController pushViewController:talkViewController animated:YES];
+    ChartViewController *chartViewController = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
+    [self.navigationController pushViewController:chartViewController animated:YES];
 
     
 }
@@ -245,54 +245,54 @@
                 message = @"首页新闻获取失败";
         }
     }
-    else if([downloader.purpose isEqualToString:kVersionDownloaderKey])
-    {
-        //版本检测返回
-        NSDictionary *dict = [str JSONValue];
-        if (dict != nil)
-        {
-            NSInteger resultCount = [[dict objectForKey:@"resultCount"]integerValue];
-            if (resultCount == 1) {
-                NSDictionary *resultDict = [[dict objectForKey:@"results"]objectAtIndex:0];
-                NSString *appVersion = [resultDict objectForKey:@"version"];
-                if (appVersion)
-                {
-                    NSString *localVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-                    if (![appVersion isEqualToString:localVersion])
-                    {
-                        //更新应用版本
-                        if (IsIos8)
-                        {
-                            NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-                            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"升级提醒"
-                                                                                           message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
-                                                                                    preferredStyle:UIAlertControllerStyleAlert];
-                            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
-                                                                      style:UIAlertActionStyleDefault
-                                                                    handler:^(UIAlertAction *action) {
-                                                                    }]];
-                            [alert addAction:[UIAlertAction actionWithTitle:@"升级"
-                                                                      style:UIAlertActionStyleDefault
-                                                                    handler:^(UIAlertAction *action) {
-                                                                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:kAppDownloadUrl,kAppAppleId]]];
-                                                                    }]];
-                            [self presentViewController:alert animated:YES completion:nil];
-                        }
-                        else
-                        {
-                            NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-                            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"升级提醒"
-                                                                                message:[NSString stringWithFormat:@"检测到新版本新版本%@，是否马上升级？",appName]
-                                                                               delegate:self
-                                                                      cancelButtonTitle:@"取消"
-                                                                      otherButtonTitles:@"升级", nil];
-                            [alertView show];
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    else if([downloader.purpose isEqualToString:kVersionDownloaderKey])
+//    {
+//        //版本检测返回
+//        NSDictionary *dict = [str JSONValue];
+//        if (dict != nil)
+//        {
+//            NSInteger resultCount = [[dict objectForKey:@"resultCount"]integerValue];
+//            if (resultCount == 1) {
+//                NSDictionary *resultDict = [[dict objectForKey:@"results"]objectAtIndex:0];
+//                NSString *appVersion = [resultDict objectForKey:@"version"];
+//                if (appVersion)
+//                {
+//                    NSString *localVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+//                    if (![appVersion isEqualToString:localVersion])
+//                    {
+//                        //更新应用版本
+//                        if (IsIos8)
+//                        {
+//                            NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+//                            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"升级提醒"
+//                                                                                           message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
+//                                                                                    preferredStyle:UIAlertControllerStyleAlert];
+//                            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+//                                                                      style:UIAlertActionStyleDefault
+//                                                                    handler:^(UIAlertAction *action) {
+//                                                                    }]];
+//                            [alert addAction:[UIAlertAction actionWithTitle:@"升级"
+//                                                                      style:UIAlertActionStyleDefault
+//                                                                    handler:^(UIAlertAction *action) {
+//                                                                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:kAppDownloadUrl,kAppAppleId]]];
+//                                                                    }]];
+//                            [self presentViewController:alert animated:YES completion:nil];
+//                        }
+//                        else
+//                        {
+//                            NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+//                            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"升级提醒"
+//                                                                                message:[NSString stringWithFormat:@"检测到新版本新版本%@，是否马上升级？",appName]
+//                                                                               delegate:self
+//                                                                      cancelButtonTitle:@"取消"
+//                                                                      otherButtonTitles:@"升级", nil];
+//                            [alertView show];
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
 - (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message
