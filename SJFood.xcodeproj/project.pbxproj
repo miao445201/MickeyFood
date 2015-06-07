@@ -11,6 +11,39 @@
 		0AA06B661B22A6BF001A7081 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B641B22A6BF001A7081 /* ChartViewController.xib */; };
 		0AA06B6A1B22A6DA001A7081 /* ExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B681B22A6DA001A7081 /* ExpressViewController.m */; };
 		0AA06B6B1B22A6DA001A7081 /* ExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B691B22A6DA001A7081 /* ExpressViewController.xib */; };
+		0AA06B701B22FFA4001A7081 /* CategorySecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B6E1B22FFA4001A7081 /* CategorySecondViewController.m */; };
+		0AA06B711B22FFA4001A7081 /* CategorySecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B6F1B22FFA4001A7081 /* CategorySecondViewController.xib */; };
+		0AA06B741B22FFFE001A7081 /* CategorySecondSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B731B22FFFE001A7081 /* CategorySecondSubView.m */; };
+		0AA06B771B2300AC001A7081 /* CategorySecondTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B761B2300AC001A7081 /* CategorySecondTableView.m */; };
+		0AA06B791B2300F8001A7081 /* CategorySecondTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B781B2300F8001A7081 /* CategorySecondTableView.xib */; };
+		0AA06B7D1B230224001A7081 /* CategorySecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B7B1B230224001A7081 /* CategorySecondTableViewCell.m */; };
+		0AA06B7E1B230224001A7081 /* CategorySecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B7C1B230224001A7081 /* CategorySecondTableViewCell.xib */; };
+		0AA06B811B230287001A7081 /* CategoryRightTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B801B230287001A7081 /* CategoryRightTableView.m */; };
+		0AA06B831B2302B4001A7081 /* CategoryRightTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B821B2302B4001A7081 /* CategoryRightTableView.xib */; };
+		0AA06B871B2304BD001A7081 /* CategoryRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B851B2304BC001A7081 /* CategoryRightTableViewCell.m */; };
+		0AA06B881B2304BD001A7081 /* CategoryRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B861B2304BC001A7081 /* CategoryRightTableViewCell.xib */; };
+		0AA06B8B1B230515001A7081 /* CategoryHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B8A1B230515001A7081 /* CategoryHeadView.m */; };
+		0AA06B8D1B23053E001A7081 /* CategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B8C1B23053E001A7081 /* CategoryHeadView.xib */; };
+		0AA06B901B230587001A7081 /* CategoryBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B8F1B230587001A7081 /* CategoryBottomView.m */; };
+		0AA06B921B2305B4001A7081 /* CategoryBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B911B2305B4001A7081 /* CategoryBottom.xib */; };
+		0AA06BA61B23EBB3001A7081 /* 椭圆-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B941B23EBB3001A7081 /* 椭圆-7@2x.png */; };
+		0AA06BA71B23EBB3001A7081 /* 椭圆-7@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B951B23EBB3001A7081 /* 椭圆-7@3x.png */; };
+		0AA06BA81B23EBB3001A7081 /* button_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B961B23EBB3001A7081 /* button_add@2x.png */; };
+		0AA06BA91B23EBB3001A7081 /* button_add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B971B23EBB3001A7081 /* button_add@3x.png */; };
+		0AA06BAA1B23EBB3001A7081 /* button_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B981B23EBB3001A7081 /* button_back@2x.png */; };
+		0AA06BAB1B23EBB3001A7081 /* button_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B991B23EBB3001A7081 /* button_back@3x.png */; };
+		0AA06BAC1B23EBB3001A7081 /* button_buy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B9A1B23EBB3001A7081 /* button_buy@2x.png */; };
+		0AA06BAD1B23EBB3001A7081 /* button_buy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B9B1B23EBB3001A7081 /* button_buy@3x.png */; };
+		0AA06BAE1B23EBB3001A7081 /* button_jian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B9C1B23EBB3001A7081 /* button_jian@2x.png */; };
+		0AA06BAF1B23EBB3001A7081 /* button_jian@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B9D1B23EBB3001A7081 /* button_jian@3x.png */; };
+		0AA06BB01B23EBB3001A7081 /* logo_buy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B9E1B23EBB3001A7081 /* logo_buy@2x.png */; };
+		0AA06BB11B23EBB3001A7081 /* logo_buy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B9F1B23EBB3001A7081 /* logo_buy@3x.png */; };
+		0AA06BB21B23EBB3001A7081 /* logo_sale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06BA01B23EBB3001A7081 /* logo_sale@2x.png */; };
+		0AA06BB31B23EBB3001A7081 /* logo_sale@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06BA11B23EBB3001A7081 /* logo_sale@3x.png */; };
+		0AA06BB41B23EBB3001A7081 /* logo_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06BA21B23EBB3001A7081 /* logo_search@2x.png */; };
+		0AA06BB51B23EBB3001A7081 /* logo_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06BA31B23EBB3001A7081 /* logo_search@3x.png */; };
+		0AA06BB61B23EBB3001A7081 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06BA41B23EBB3001A7081 /* search@2x.png */; };
+		0AA06BB71B23EBB3001A7081 /* search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06BA51B23EBB3001A7081 /* search@3x.png */; };
 		0AED7A811B1C450E00617B3C /* button_deliever@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A731B1C450E00617B3C /* button_deliever@2x.png */; };
 		0AED7A821B1C450E00617B3C /* button_deliever@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A741B1C450E00617B3C /* button_deliever@3x.png */; };
 		0AED7A831B1C450E00617B3C /* button_discuss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A751B1C450E00617B3C /* button_discuss@2x.png */; };
@@ -490,6 +523,47 @@
 		0AA06B671B22A6DA001A7081 /* ExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressViewController.h; path = "快递无忧/ExpressViewController.h"; sourceTree = "<group>"; };
 		0AA06B681B22A6DA001A7081 /* ExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressViewController.m; path = "快递无忧/ExpressViewController.m"; sourceTree = "<group>"; };
 		0AA06B691B22A6DA001A7081 /* ExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpressViewController.xib; path = "快递无忧/ExpressViewController.xib"; sourceTree = "<group>"; };
+		0AA06B6D1B22FFA4001A7081 /* CategorySecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySecondViewController.h; path = "分类V2/CategorySecondViewController.h"; sourceTree = "<group>"; };
+		0AA06B6E1B22FFA4001A7081 /* CategorySecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySecondViewController.m; path = "分类V2/CategorySecondViewController.m"; sourceTree = "<group>"; };
+		0AA06B6F1B22FFA4001A7081 /* CategorySecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategorySecondViewController.xib; path = "分类V2/CategorySecondViewController.xib"; sourceTree = "<group>"; };
+		0AA06B721B22FFFE001A7081 /* CategorySecondSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySecondSubView.h; path = "分类V2/CategorySecondSubView.h"; sourceTree = "<group>"; };
+		0AA06B731B22FFFE001A7081 /* CategorySecondSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySecondSubView.m; path = "分类V2/CategorySecondSubView.m"; sourceTree = "<group>"; };
+		0AA06B751B2300AC001A7081 /* CategorySecondTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySecondTableView.h; path = "分类V2/CategorySecondTableView.h"; sourceTree = "<group>"; };
+		0AA06B761B2300AC001A7081 /* CategorySecondTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySecondTableView.m; path = "分类V2/CategorySecondTableView.m"; sourceTree = "<group>"; };
+		0AA06B781B2300F8001A7081 /* CategorySecondTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategorySecondTableView.xib; path = "分类V2/CategorySecondTableView.xib"; sourceTree = "<group>"; };
+		0AA06B7A1B230224001A7081 /* CategorySecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySecondTableViewCell.h; path = "分类V2/CategorySecondTableViewCell.h"; sourceTree = "<group>"; };
+		0AA06B7B1B230224001A7081 /* CategorySecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySecondTableViewCell.m; path = "分类V2/CategorySecondTableViewCell.m"; sourceTree = "<group>"; };
+		0AA06B7C1B230224001A7081 /* CategorySecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategorySecondTableViewCell.xib; path = "分类V2/CategorySecondTableViewCell.xib"; sourceTree = "<group>"; };
+		0AA06B7F1B230287001A7081 /* CategoryRightTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryRightTableView.h; path = "分类V2/CategoryRightTableView.h"; sourceTree = "<group>"; };
+		0AA06B801B230287001A7081 /* CategoryRightTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryRightTableView.m; path = "分类V2/CategoryRightTableView.m"; sourceTree = "<group>"; };
+		0AA06B821B2302B4001A7081 /* CategoryRightTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryRightTableView.xib; path = "分类V2/CategoryRightTableView.xib"; sourceTree = "<group>"; };
+		0AA06B841B2304BC001A7081 /* CategoryRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryRightTableViewCell.h; path = "分类V2/CategoryRightTableViewCell.h"; sourceTree = "<group>"; };
+		0AA06B851B2304BC001A7081 /* CategoryRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryRightTableViewCell.m; path = "分类V2/CategoryRightTableViewCell.m"; sourceTree = "<group>"; };
+		0AA06B861B2304BC001A7081 /* CategoryRightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryRightTableViewCell.xib; path = "分类V2/CategoryRightTableViewCell.xib"; sourceTree = "<group>"; };
+		0AA06B891B230515001A7081 /* CategoryHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryHeadView.h; path = "分类V2/CategoryHeadView.h"; sourceTree = "<group>"; };
+		0AA06B8A1B230515001A7081 /* CategoryHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryHeadView.m; path = "分类V2/CategoryHeadView.m"; sourceTree = "<group>"; };
+		0AA06B8C1B23053E001A7081 /* CategoryHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryHeadView.xib; path = "分类V2/CategoryHeadView.xib"; sourceTree = "<group>"; };
+		0AA06B8E1B230587001A7081 /* CategoryBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryBottomView.h; path = "分类V2/CategoryBottomView.h"; sourceTree = "<group>"; };
+		0AA06B8F1B230587001A7081 /* CategoryBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryBottomView.m; path = "分类V2/CategoryBottomView.m"; sourceTree = "<group>"; };
+		0AA06B911B2305B4001A7081 /* CategoryBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryBottom.xib; path = "分类V2/CategoryBottom.xib"; sourceTree = "<group>"; };
+		0AA06B941B23EBB3001A7081 /* 椭圆-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-7@2x.png"; sourceTree = "<group>"; };
+		0AA06B951B23EBB3001A7081 /* 椭圆-7@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-7@3x.png"; sourceTree = "<group>"; };
+		0AA06B961B23EBB3001A7081 /* button_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_add@2x.png"; sourceTree = "<group>"; };
+		0AA06B971B23EBB3001A7081 /* button_add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_add@3x.png"; sourceTree = "<group>"; };
+		0AA06B981B23EBB3001A7081 /* button_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back@2x.png"; sourceTree = "<group>"; };
+		0AA06B991B23EBB3001A7081 /* button_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back@3x.png"; sourceTree = "<group>"; };
+		0AA06B9A1B23EBB3001A7081 /* button_buy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_buy@2x.png"; sourceTree = "<group>"; };
+		0AA06B9B1B23EBB3001A7081 /* button_buy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_buy@3x.png"; sourceTree = "<group>"; };
+		0AA06B9C1B23EBB3001A7081 /* button_jian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_jian@2x.png"; sourceTree = "<group>"; };
+		0AA06B9D1B23EBB3001A7081 /* button_jian@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_jian@3x.png"; sourceTree = "<group>"; };
+		0AA06B9E1B23EBB3001A7081 /* logo_buy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_buy@2x.png"; sourceTree = "<group>"; };
+		0AA06B9F1B23EBB3001A7081 /* logo_buy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_buy@3x.png"; sourceTree = "<group>"; };
+		0AA06BA01B23EBB3001A7081 /* logo_sale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_sale@2x.png"; sourceTree = "<group>"; };
+		0AA06BA11B23EBB3001A7081 /* logo_sale@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_sale@3x.png"; sourceTree = "<group>"; };
+		0AA06BA21B23EBB3001A7081 /* logo_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_search@2x.png"; sourceTree = "<group>"; };
+		0AA06BA31B23EBB3001A7081 /* logo_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_search@3x.png"; sourceTree = "<group>"; };
+		0AA06BA41B23EBB3001A7081 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		0AA06BA51B23EBB3001A7081 /* search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@3x.png"; sourceTree = "<group>"; };
 		0AED7A731B1C450E00617B3C /* button_deliever@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_deliever@2x.png"; sourceTree = "<group>"; };
 		0AED7A741B1C450E00617B3C /* button_deliever@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_deliever@3x.png"; sourceTree = "<group>"; };
 		0AED7A751B1C450E00617B3C /* button_discuss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_discuss@2x.png"; sourceTree = "<group>"; };
@@ -1119,9 +1193,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA06B6C1B22EF5B001A7081 /* 分类V2 */ = {
+			isa = PBXGroup;
+			children = (
+				0AA06B6D1B22FFA4001A7081 /* CategorySecondViewController.h */,
+				0AA06B6E1B22FFA4001A7081 /* CategorySecondViewController.m */,
+				0AA06B6F1B22FFA4001A7081 /* CategorySecondViewController.xib */,
+				0AA06B721B22FFFE001A7081 /* CategorySecondSubView.h */,
+				0AA06B731B22FFFE001A7081 /* CategorySecondSubView.m */,
+				0AA06B891B230515001A7081 /* CategoryHeadView.h */,
+				0AA06B8A1B230515001A7081 /* CategoryHeadView.m */,
+				0AA06B8C1B23053E001A7081 /* CategoryHeadView.xib */,
+				0AA06B751B2300AC001A7081 /* CategorySecondTableView.h */,
+				0AA06B761B2300AC001A7081 /* CategorySecondTableView.m */,
+				0AA06B781B2300F8001A7081 /* CategorySecondTableView.xib */,
+				0AA06B7A1B230224001A7081 /* CategorySecondTableViewCell.h */,
+				0AA06B7B1B230224001A7081 /* CategorySecondTableViewCell.m */,
+				0AA06B7C1B230224001A7081 /* CategorySecondTableViewCell.xib */,
+				0AA06B7F1B230287001A7081 /* CategoryRightTableView.h */,
+				0AA06B801B230287001A7081 /* CategoryRightTableView.m */,
+				0AA06B821B2302B4001A7081 /* CategoryRightTableView.xib */,
+				0AA06B841B2304BC001A7081 /* CategoryRightTableViewCell.h */,
+				0AA06B851B2304BC001A7081 /* CategoryRightTableViewCell.m */,
+				0AA06B861B2304BC001A7081 /* CategoryRightTableViewCell.xib */,
+				0AA06B8E1B230587001A7081 /* CategoryBottomView.h */,
+				0AA06B8F1B230587001A7081 /* CategoryBottomView.m */,
+				0AA06B911B2305B4001A7081 /* CategoryBottom.xib */,
+			);
+			name = "分类V2";
+			sourceTree = "<group>";
+		};
+		0AA06B931B23EB8B001A7081 /* 挑食 */ = {
+			isa = PBXGroup;
+			children = (
+				0AA06B941B23EBB3001A7081 /* 椭圆-7@2x.png */,
+				0AA06B951B23EBB3001A7081 /* 椭圆-7@3x.png */,
+				0AA06B961B23EBB3001A7081 /* button_add@2x.png */,
+				0AA06B971B23EBB3001A7081 /* button_add@3x.png */,
+				0AA06B981B23EBB3001A7081 /* button_back@2x.png */,
+				0AA06B991B23EBB3001A7081 /* button_back@3x.png */,
+				0AA06B9A1B23EBB3001A7081 /* button_buy@2x.png */,
+				0AA06B9B1B23EBB3001A7081 /* button_buy@3x.png */,
+				0AA06B9C1B23EBB3001A7081 /* button_jian@2x.png */,
+				0AA06B9D1B23EBB3001A7081 /* button_jian@3x.png */,
+				0AA06B9E1B23EBB3001A7081 /* logo_buy@2x.png */,
+				0AA06B9F1B23EBB3001A7081 /* logo_buy@3x.png */,
+				0AA06BA01B23EBB3001A7081 /* logo_sale@2x.png */,
+				0AA06BA11B23EBB3001A7081 /* logo_sale@3x.png */,
+				0AA06BA21B23EBB3001A7081 /* logo_search@2x.png */,
+				0AA06BA31B23EBB3001A7081 /* logo_search@3x.png */,
+				0AA06BA41B23EBB3001A7081 /* search@2x.png */,
+				0AA06BA51B23EBB3001A7081 /* search@3x.png */,
+			);
+			name = "挑食";
+			sourceTree = "<group>";
+		};
 		0AED7A711B1C44C000617B3C /* V2 */ = {
 			isa = PBXGroup;
 			children = (
+				0AA06B931B23EB8B001A7081 /* 挑食 */,
 				0AED7A721B1C44CD00617B3C /* 首页 */,
 			);
 			name = V2;
@@ -1790,6 +1920,7 @@
 				0AED7AB81B1C752B00617B3C /* 吐槽 */,
 				0AED7AB21B1C74A200617B3C /* 快递无忧 */,
 				75E4789B1A7F586B002DC26D /* 购物车 */,
+				0AA06B6C1B22EF5B001A7081 /* 分类V2 */,
 				7514E50A1A3D890D0091A26D /* 分类 */,
 				758512A11A32F5D800504FA8 /* 设置 */,
 				7542C4A01A2D970E00BB083D /* 我的 */,
@@ -2221,6 +2352,7 @@
 				7533EEAA1A2E0EF4001D12D4 /* YFWebViewController.xib in Resources */,
 				75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */,
 				753FAF3D1AFD0EC900F12B94 /* PushConfig.plist in Resources */,
+				0AA06BB61B23EBB3001A7081 /* search@2x.png in Resources */,
 				75F594C01AA74740004B3CDF /* btn_default_shopping_selected@2x.png in Resources */,
 				755722BF1A34891400CC6A8F /* icon_wechat_moment@3x.png in Resources */,
 				757DE9A71A45617F0054BE47 /* bg_add_shopping_car@2x.png in Resources */,
@@ -2241,6 +2373,7 @@
 				75EED4311A320B79002ECA75 /* icon_feedback@3x.png in Resources */,
 				75C764041AD2B6B500A2A486 /* btn_bao@2x.png in Resources */,
 				7542C4641A2CA42400BB083D /* LoginViewController.xib in Resources */,
+				0AA06BB71B23EBB3001A7081 /* search@3x.png in Resources */,
 				758512A01A32F45800504FA8 /* AddressViewController.xib in Resources */,
 				7527DF851AAC8D2C00A20A01 /* btn_confirm_num@3x.png in Resources */,
 				0AED7A8B1B1C450E00617B3C /* button_shop@2x.png in Resources */,
@@ -2262,16 +2395,20 @@
 				755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */,
 				7545475A1AC5A5A000A872E4 /* CourierOrderMap.plist in Resources */,
 				7527DF841AAC8D2C00A20A01 /* btn_confirm_num@2x.png in Resources */,
+				0AA06BAF1B23EBB3001A7081 /* button_jian@3x.png in Resources */,
 				7564F2B61ABC163C00506E68 /* btn_category_selected@3x.png in Resources */,
 				757E84011AC6873B004DF3F7 /* SelectCourierViewController.xib in Resources */,
 				75F90A8B1A49CFF600CB19EB /* SpecView.xib in Resources */,
+				0AA06BB41B23EBB3001A7081 /* logo_search@2x.png in Resources */,
 				75535B4F1AC8235D00B9C551 /* guidepage_3_480h@2x.png in Resources */,
+				0AA06BA91B23EBB3001A7081 /* button_add@3x.png in Resources */,
 				7564F2A01ABBF91800506E68 /* icon_display@3x.png in Resources */,
 				756C62EF1A47071C007B2ECB /* bg_star_empty@2x.png in Resources */,
 				758853111AD39512001DA0BB /* btn_bao@3x.png in Resources */,
 				75164DB01ABAAEAF0046F86E /* loading_rectangle@3x.png in Resources */,
 				750F6B361AC0524700891124 /* OrderDetailTableViewCell.xib in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
+				0AA06BAD1B23EBB3001A7081 /* button_buy@3x.png in Resources */,
 				75FCAC031AC415D800C1368C /* box_logo@3x.png in Resources */,
 				0AED7A8D1B1C450E00617B3C /* local@2x.png in Resources */,
 				7533463E1A416C40000CD338 /* btn_food_sort_selected@3x.png in Resources */,
@@ -2311,6 +2448,7 @@
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
 				75FCABFA1AC403FC00C1368C /* logo@3x.png in Resources */,
 				7585129B1A32F44700504FA8 /* MyMessageViewController.xib in Resources */,
+				0AA06BAC1B23EBB3001A7081 /* button_buy@2x.png in Resources */,
 				751B21011AB1DED900B1CFE6 /* btn_spec_num@2x.png in Resources */,
 				75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */,
 				758937B91AB673A30003ECEE /* btn_category@2x.png in Resources */,
@@ -2318,7 +2456,9 @@
 				755722BC1A34891400CC6A8F /* icon_sina_weibo@2x.png in Resources */,
 				75EED4181A31F7DA002ECA75 /* icon_comment@3x.png in Resources */,
 				7557224E1A33356500CC6A8F /* SettingTableViewCell.xib in Resources */,
+				0AA06B791B2300F8001A7081 /* CategorySecondTableView.xib in Resources */,
 				75535B491AC8235D00B9C551 /* guidepage_1_667h@2x.png in Resources */,
+				0AA06BB31B23EBB3001A7081 /* logo_sale@3x.png in Resources */,
 				0AED7A8C1B1C450E00617B3C /* button_shop@3x.png in Resources */,
 				75FCAC011AC414B800C1368C /* box_logo@2x.png in Resources */,
 				7589543C1A24B853001C2350 /* StartViewController.xib in Resources */,
@@ -2331,8 +2471,10 @@
 				758848B91AC2F8E0006F98F9 /* CalculateInfoMap.plist in Resources */,
 				75F90A811A49B44700CB19EB /* ImageTemplete.html in Resources */,
 				758512B01A32F78400504FA8 /* UserSettingView.xib in Resources */,
+				0AA06B831B2302B4001A7081 /* CategoryRightTableView.xib in Resources */,
 				758EA27B1AD2C2E0008BD7B2 /* btn_mmijian@3x.png in Resources */,
 				754547491AC59A2100A872E4 /* CourierOrderView.xib in Resources */,
+				0AA06B8D1B23053E001A7081 /* CategoryHeadView.xib in Resources */,
 				757DE9A21A455E560054BE47 /* FoodDetailViewController.xib in Resources */,
 				7533EEF11A2E1536001D12D4 /* icon_code@3x.png in Resources */,
 				758937BD1AB673A30003ECEE /* btn_shopping@2x.png in Resources */,
@@ -2347,6 +2489,7 @@
 				758937BE1AB673A30003ECEE /* btn_shopping@3x.png in Resources */,
 				7533EEF71A2E1536001D12D4 /* icon_pwd@3x.png in Resources */,
 				75D1E2BD1A3AC806008555B1 /* btn_default_address@2x.png in Resources */,
+				0AA06BB21B23EBB3001A7081 /* logo_sale@2x.png in Resources */,
 				75E478A51A7F6AAC002DC26D /* icon_no_food@3x.png in Resources */,
 				7533EEF81A2E1536001D12D4 /* icon_radio_normal@2x.png in Resources */,
 				75D1E2B91A3AC6F6008555B1 /* btn_default_address_selected@2x.png in Resources */,
@@ -2354,6 +2497,7 @@
 				758853141AD39512001DA0BB /* btn_sale@3x.png in Resources */,
 				7533EF071A2E1568001D12D4 /* Mickeyabout.html in Resources */,
 				75C11BCC1AD393B200045998 /* btn_special@3x.png in Resources */,
+				0AA06BB01B23EBB3001A7081 /* logo_buy@2x.png in Resources */,
 				75EED41B1A31F7E5002ECA75 /* icon_refund@2x.png in Resources */,
 				7533EEF51A2E1536001D12D4 /* icon_mobile_num@3x.png in Resources */,
 				7533EECD1A2E14E7001D12D4 /* icon_search@2x.png in Resources */,
@@ -2382,6 +2526,7 @@
 				7533EEFD1A2E1536001D12D4 /* icon_user@3x.png in Resources */,
 				75535B4D1AC8235D00B9C551 /* guidepage_2_667h@2x.png in Resources */,
 				750F6B311AC04AAE00891124 /* OrderTableViewCell.xib in Resources */,
+				0AA06BA71B23EBB3001A7081 /* 椭圆-7@3x.png in Resources */,
 				0AED7A821B1C450E00617B3C /* button_deliever@3x.png in Resources */,
 				755722BE1A34891400CC6A8F /* icon_wechat_moment@2x.png in Resources */,
 				758AAD721A4A5FC10047E678 /* btn_num_bg@3x.png in Resources */,
@@ -2389,17 +2534,22 @@
 				758EA27E1AD2C2E0008BD7B2 /* btn_nut@3x.png in Resources */,
 				75EED4381A320B79002ECA75 /* icon_user_message@2x.png in Resources */,
 				75C764101AD2B6B500A2A486 /* btn_sweetday@2x.png in Resources */,
+				0AA06B881B2304BD001A7081 /* CategoryRightTableViewCell.xib in Resources */,
 				75C764091AD2B6B500A2A486 /* btn_meat@2x.png in Resources */,
 				75AD584D1A38287200E39640 /* PasswordEditViewController.xib in Resources */,
 				75AD58421A38178C00E39640 /* MyAccountImageTableViewCell.xib in Resources */,
 				75FCABF11AC3D50A00C1368C /* logo_local@2x.png in Resources */,
+				0AA06B921B2305B4001A7081 /* CategoryBottom.xib in Resources */,
 				7533EED41A2E150A001D12D4 /* line_hon_1px_down.png in Resources */,
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
 				0AED7A851B1C450E00617B3C /* button_hot@2x.png in Resources */,
 				755722621A34290F00CC6A8F /* WelcomeViewController.xib in Resources */,
+				0AA06B711B22FFA4001A7081 /* CategorySecondViewController.xib in Resources */,
 				754547471AC5997000A872E4 /* SendOrderView.xib in Resources */,
+				0AA06B7E1B230224001A7081 /* CategorySecondTableViewCell.xib in Resources */,
 				755077661A46BC6900CD18EF /* icon_arrow@3x.png in Resources */,
 				7533EF041A2E1549001D12D4 /* icon_header_cancel@2x.png in Resources */,
+				0AA06BAB1B23EBB3001A7081 /* button_back@3x.png in Resources */,
 				755077611A46BAB800CD18EF /* bg_star_full@2x.png in Resources */,
 				75535B471AC8235D00B9C551 /* guidepage_1_480h@2x.png in Resources */,
 				757E83F31AC5B48E004DF3F7 /* SendOrderTableViewCell.xib in Resources */,
@@ -2420,12 +2570,14 @@
 				758E4CA11A42C648004547E2 /* tag_discount@2x.png in Resources */,
 				755077701A46C07100CD18EF /* FoodDetailMap.plist in Resources */,
 				758937BB1AB673A30003ECEE /* btn_home@2x.png in Resources */,
+				0AA06BAA1B23EBB3001A7081 /* button_back@2x.png in Resources */,
 				7564F29A1ABBF77700506E68 /* FoodRemarkTableViewCell.xib in Resources */,
 				75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */,
 				0AED7A8A1B1C450E00617B3C /* button_sale@3x.png in Resources */,
 				75F5F3A51AB894A400FA849E /* ImagesContainView.xib in Resources */,
 				75A95CDB1A40367D0009962F /* tab_select_bg@3x.png in Resources */,
 				7533EEF41A2E1536001D12D4 /* icon_mobile_num@2x.png in Resources */,
+				0AA06BAE1B23EBB3001A7081 /* button_jian@2x.png in Resources */,
 				7542C4861A2CC11C00BB083D /* RegisterViewController.xib in Resources */,
 				758EA2811AD2C2E0008BD7B2 /* btn_sweetday@3x.png in Resources */,
 				7533EED71A2E150A001D12D4 /* line_ver_1px_right.png in Resources */,
@@ -2434,6 +2586,7 @@
 				7564F2A21ABBF91800506E68 /* icon_triangle@3x.png in Resources */,
 				7533463D1A416C40000CD338 /* btn_food_sort_selected@2x.png in Resources */,
 				7542C4A51A2D972400BB083D /* UserInfoViewController.xib in Resources */,
+				0AA06BA61B23EBB3001A7081 /* 椭圆-7@2x.png in Resources */,
 				758937BA1AB673A30003ECEE /* btn_category@3x.png in Resources */,
 				75164DBA1ABAC0F30046F86E /* loading_square@2x.png in Resources */,
 				7564F2AF1ABC0A8700506E68 /* btn_shopping_selected@2x.png in Resources */,
@@ -2453,6 +2606,7 @@
 				755077651A46BC6900CD18EF /* icon_arrow@2x.png in Resources */,
 				75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */,
 				758EA2751AD2C2E0008BD7B2 /* btn_biz@3x.png in Resources */,
+				0AA06BB51B23EBB3001A7081 /* logo_search@3x.png in Resources */,
 				75535B501AC8235D00B9C551 /* guidepage_3_568h@2x.png in Resources */,
 				758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */,
 				758937BC1AB673A30003ECEE /* btn_home@3x.png in Resources */,
@@ -2467,6 +2621,7 @@
 				75A95CD71A4024450009962F /* CategoryCollectionViewCell.xib in Resources */,
 				75EED43B1A320DDA002ECA75 /* OrderInfoMap.plist in Resources */,
 				7564F2AE1ABC0A8700506E68 /* btn_home_selected@3x.png in Resources */,
+				0AA06BA81B23EBB3001A7081 /* button_add@2x.png in Resources */,
 				7533EECA1A2E14E7001D12D4 /* icon_message@3x.png in Resources */,
 				0AED7A891B1C450E00617B3C /* button_sale@2x.png in Resources */,
 				7550774F1A469F0700CD18EF /* FoodHeaderView.xib in Resources */,
@@ -2476,6 +2631,7 @@
 				75EED4321A320B79002ECA75 /* icon_order@2x.png in Resources */,
 				755722501A3339DE00CC6A8F /* SettingMap.plist in Resources */,
 				75F594BD1AA72999004B3CDF /* ShoppingCarTableViewCell.xib in Resources */,
+				0AA06BB11B23EBB3001A7081 /* logo_buy@3x.png in Resources */,
 				7533EEED1A2E1536001D12D4 /* btn_full@3x.png in Resources */,
 				757E83EC1AC5AE77004DF3F7 /* icon_select_order@3x.png in Resources */,
 				0AED7A841B1C450E00617B3C /* button_discuss@3x.png in Resources */,
@@ -2525,6 +2681,7 @@
 				758512731A32E91100504FA8 /* MJRefreshConst.m in Sources */,
 				7542C4671A2CAB0500BB083D /* CustomLightNavigationController.m in Sources */,
 				75C241B41AFB90EB00E1DA29 /* NoteViewController.m in Sources */,
+				0AA06B871B2304BD001A7081 /* CategoryRightTableViewCell.m in Sources */,
 				758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */,
 				758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */,
 				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
@@ -2534,10 +2691,12 @@
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
 				7514E5121A3D89840091A26D /* FoodCategory.m in Sources */,
 				757E84001AC6873B004DF3F7 /* SelectCourierViewController.m in Sources */,
+				0AA06B7D1B230224001A7081 /* CategorySecondTableViewCell.m in Sources */,
 				758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */,
 				75EED43F1A320F61002ECA75 /* UserInfoTableViewCell.m in Sources */,
 				75FCABFE1AC4064F00C1368C /* AboutBOXViewController.m in Sources */,
 				7550776E1A46BFC900CD18EF /* FoodDetailSubView.m in Sources */,
+				0AA06B701B22FFA4001A7081 /* CategorySecondViewController.m in Sources */,
 				75AD58411A38178C00E39640 /* MyAccountImageTableViewCell.m in Sources */,
 				755722611A34290F00CC6A8F /* WelcomeViewController.m in Sources */,
 				758512741A32E91100504FA8 /* MJRefreshFooterView.m in Sources */,
@@ -2551,6 +2710,7 @@
 				7564F2991ABBF77700506E68 /* FoodRemarkTableViewCell.m in Sources */,
 				7585129F1A32F45800504FA8 /* AddressViewController.m in Sources */,
 				7514E50E1A3D890D0091A26D /* CategoryViewController.m in Sources */,
+				0AA06B8B1B230515001A7081 /* CategoryHeadView.m in Sources */,
 				7514E5151A3D92C30091A26D /* FoodCategoryDetail.m in Sources */,
 				750F6B301AC04AAE00891124 /* OrderTableViewCell.m in Sources */,
 				75F5F3A31AB8947E00FA849E /* ImagesContainView.m in Sources */,
@@ -2558,10 +2718,12 @@
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
 				757DE9A11A455E560054BE47 /* FoodDetailViewController.m in Sources */,
 				75D1E2CB1A3ACEE5008555B1 /* AddressAddViewController.m in Sources */,
+				0AA06B901B230587001A7081 /* CategoryBottomView.m in Sources */,
 				7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */,
 				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
 				75AD58301A3810C000E39640 /* ShareViewController.m in Sources */,
 				758512951A32F43400504FA8 /* MyAccountViewController.m in Sources */,
+				0AA06B771B2300AC001A7081 /* CategorySecondTableView.m in Sources */,
 				7555FF8C1AC187CF001A0497 /* OrderDetails.m in Sources */,
 				754547521AC5A54500A872E4 /* SendOrdersViewController.m in Sources */,
 				7545474C1AC59A3200A872E4 /* CourierOrderView.m in Sources */,
@@ -2597,6 +2759,7 @@
 				75AD583A1A38113A00E39640 /* MyAccountTableViewCell.m in Sources */,
 				75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */,
 				758512AA1A32F68D00504FA8 /* FeedbackViewController.m in Sources */,
+				0AA06B741B22FFFE001A7081 /* CategorySecondSubView.m in Sources */,
 				755077691A46BCE400CD18EF /* FoodImageDetailView.m in Sources */,
 				75AD582E1A3810C000E39640 /* ShareTableViewCell.m in Sources */,
 				758512751A32E91100504FA8 /* MJRefreshHeaderView.m in Sources */,
@@ -2622,6 +2785,7 @@
 				758954471A24BB0E001C2350 /* RootTabBarViewController.m in Sources */,
 				750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */,
 				0AED7AA91B1C58F100617B3C /* MASCompositeConstraint.m in Sources */,
+				0AA06B811B230287001A7081 /* CategoryRightTableView.m in Sources */,
 				755722C81A35857000CC6A8F /* UserInfo.m in Sources */,
 				75EED3DC1A31638E002ECA75 /* UserEditView.m in Sources */,
 				75F5F3AB1AB89FEE00FA849E /* AdModel.m in Sources */,

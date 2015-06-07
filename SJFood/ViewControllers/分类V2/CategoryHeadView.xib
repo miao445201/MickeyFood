@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CategoryHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-Wi-9Yg">
+                    <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_ver_1px_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVy-0F-PfO">
+                            <rect key="frame" x="106" y="8" width="1" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="j6T-b1-K9w"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_ver_1px_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="d5u-Kc-Uly">
+                            <rect key="frame" x="214" y="8" width="1" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="61y-Sp-Sv8"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-px-ZsN">
+                            <rect key="frame" x="15" y="0.0" width="80" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="综合">
+                                <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" title="综合" backgroundImage="btn_food_sort_selected">
+                                <color key="titleColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koM-Dd-JqF">
+                            <rect key="frame" x="225" y="0.0" width="80" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="价格">
+                                <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" title="价格" backgroundImage="btn_food_sort_selected">
+                                <color key="titleColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-Xd-0yB">
+                            <rect key="frame" x="120" y="0.0" width="80" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="销量">
+                                <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" title="销量" backgroundImage="btn_food_sort_selected">
+                                <color key="titleColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pYT-px-ZsN" firstAttribute="width" secondItem="koM-Dd-JqF" secondAttribute="width" id="5G7-2w-SMN"/>
+                        <constraint firstAttribute="bottom" secondItem="d5u-Kc-Uly" secondAttribute="bottom" constant="8" id="9tb-hb-kzO"/>
+                        <constraint firstAttribute="height" constant="40" id="Cbk-bR-Zoe"/>
+                        <constraint firstItem="pYT-px-ZsN" firstAttribute="height" secondItem="koM-Dd-JqF" secondAttribute="height" id="DBS-mb-PVP"/>
+                        <constraint firstItem="pYT-px-ZsN" firstAttribute="width" secondItem="TRl-Xd-0yB" secondAttribute="width" id="F4y-1K-cFU"/>
+                        <constraint firstAttribute="trailing" secondItem="koM-Dd-JqF" secondAttribute="trailing" constant="15" id="F7j-MA-It2"/>
+                        <constraint firstItem="pYT-px-ZsN" firstAttribute="leading" secondItem="wSg-Wi-9Yg" secondAttribute="leading" constant="15" id="ImA-tO-g9B"/>
+                        <constraint firstAttribute="bottom" secondItem="TRl-Xd-0yB" secondAttribute="bottom" id="ORn-dx-Qg3"/>
+                        <constraint firstItem="TRl-Xd-0yB" firstAttribute="leading" secondItem="yVy-0F-PfO" secondAttribute="trailing" constant="13" id="P7c-r9-Cjz"/>
+                        <constraint firstAttribute="bottom" secondItem="pYT-px-ZsN" secondAttribute="bottom" id="SEx-2r-BLb"/>
+                        <constraint firstItem="pYT-px-ZsN" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" id="Sbe-qz-E1x"/>
+                        <constraint firstItem="TRl-Xd-0yB" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" id="TIt-iX-G8n"/>
+                        <constraint firstItem="TRl-Xd-0yB" firstAttribute="leading" secondItem="yVy-0F-PfO" secondAttribute="trailing" constant="13" id="Udh-5l-pZK"/>
+                        <constraint firstItem="d5u-Kc-Uly" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" constant="8" id="UfQ-xB-mJk"/>
+                        <constraint firstItem="koM-Dd-JqF" firstAttribute="leading" secondItem="d5u-Kc-Uly" secondAttribute="trailing" constant="10" id="VDW-yQ-H4U"/>
+                        <constraint firstItem="pYT-px-ZsN" firstAttribute="height" secondItem="TRl-Xd-0yB" secondAttribute="height" id="Zz0-KN-ABa"/>
+                        <constraint firstItem="koM-Dd-JqF" firstAttribute="leading" secondItem="d5u-Kc-Uly" secondAttribute="trailing" constant="10" id="cVC-al-wJT"/>
+                        <constraint firstItem="d5u-Kc-Uly" firstAttribute="leading" secondItem="TRl-Xd-0yB" secondAttribute="trailing" constant="14" id="g5P-ny-P5I"/>
+                        <constraint firstAttribute="bottom" secondItem="yVy-0F-PfO" secondAttribute="bottom" constant="8" id="hMF-t5-KAq"/>
+                        <constraint firstItem="yVy-0F-PfO" firstAttribute="leading" secondItem="pYT-px-ZsN" secondAttribute="trailing" constant="11" id="hP7-Vj-v8p"/>
+                        <constraint firstItem="d5u-Kc-Uly" firstAttribute="leading" secondItem="TRl-Xd-0yB" secondAttribute="trailing" constant="14" id="k0H-uS-j0Y"/>
+                        <constraint firstItem="yVy-0F-PfO" firstAttribute="leading" secondItem="pYT-px-ZsN" secondAttribute="trailing" constant="11" id="kwM-Rx-yZP"/>
+                        <constraint firstItem="yVy-0F-PfO" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" constant="8" id="rKd-Ke-Cfm"/>
+                        <constraint firstItem="koM-Dd-JqF" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" id="rTI-bv-Qnk"/>
+                        <constraint firstAttribute="bottom" secondItem="koM-Dd-JqF" secondAttribute="bottom" id="z8Y-Ba-K2E"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wSg-Wi-9Yg" secondAttribute="bottom" id="57b-bS-WrA"/>
+                <constraint firstAttribute="trailing" secondItem="wSg-Wi-9Yg" secondAttribute="trailing" id="EIh-lj-tIE"/>
+                <constraint firstItem="wSg-Wi-9Yg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TWr-E2-Bxk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="576" y="186"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_food_sort_selected" width="2" height="149"/>
+        <image name="line_ver_1px_left.png" width="2" height="149"/>
+        <image name="line_ver_1px_right.png" width="2" height="149"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
