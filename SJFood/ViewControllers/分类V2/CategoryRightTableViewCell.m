@@ -9,6 +9,7 @@
 #import "CategoryRightTableViewCell.h"
 
 @implementation CategoryRightTableViewCell
+@synthesize iconImage,addButton,minusButton,priceLabel,nameLabel,amountLabel,amountBuyer;
 
 - (void)awakeFromNib {
     // Initialization code

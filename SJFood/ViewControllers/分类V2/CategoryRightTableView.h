@@ -9,5 +9,6 @@
 #import "CategorySecondSubView.h"
 
 @interface CategoryRightTableView : CategorySecondSubView
+@property (weak, nonatomic) IBOutlet UITableView *rightTableView;
 
 @end

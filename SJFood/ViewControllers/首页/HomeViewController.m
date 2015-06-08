@@ -12,7 +12,8 @@
 #import "FoodViewController.h"
 #import "HomeModuleView.h"
 #import "MyMessageViewController.h"
-#import "CategoryViewController.h"
+//#import "CategoryViewController.h"
+#import "CategorySecondViewController.h"
 #import "ChartViewController.h"
 #import "ExpressViewController.h"
 
@@ -129,7 +130,7 @@
 
 - (void)CategoryButtonWithTagNotification:(NSNotification *)notification
 {
-    CategoryViewController *cvc = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController" bundle:nil];
+    CategorySecondViewController *cvc = [[CategorySecondViewController alloc]initWithNibName:@"CategorySecondViewController" bundle:nil];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 
