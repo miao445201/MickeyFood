@@ -13,7 +13,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o7S-pX-TCw">
                     <rect key="frame" x="0.0" y="0.0" width="80" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="ade-5P-UqI"/>
                         <outlet property="delegate" destination="iN0-l3-epB" id="Upp-2c-Io5"/>
@@ -25,7 +25,7 @@
             <connections>
                 <outlet property="categorySecondTableView" destination="o7S-pX-TCw" id="1ma-S5-kvD"/>
             </connections>
-            <point key="canvasLocation" x="262" y="333"/>
+            <point key="canvasLocation" x="262" y="326"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

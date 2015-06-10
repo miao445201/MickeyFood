@@ -25,7 +25,7 @@
 		0AA06B8B1B230515001A7081 /* CategoryHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B8A1B230515001A7081 /* CategoryHeadView.m */; };
 		0AA06B8D1B23053E001A7081 /* CategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B8C1B23053E001A7081 /* CategoryHeadView.xib */; };
 		0AA06B901B230587001A7081 /* CategoryBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B8F1B230587001A7081 /* CategoryBottomView.m */; };
-		0AA06B921B2305B4001A7081 /* CategoryBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B911B2305B4001A7081 /* CategoryBottom.xib */; };
+		0AA06B921B2305B4001A7081 /* CategoryBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B911B2305B4001A7081 /* CategoryBottomView.xib */; };
 		0AA06BA61B23EBB3001A7081 /* 椭圆-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B941B23EBB3001A7081 /* 椭圆-7@2x.png */; };
 		0AA06BA71B23EBB3001A7081 /* 椭圆-7@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B951B23EBB3001A7081 /* 椭圆-7@3x.png */; };
 		0AA06BA81B23EBB3001A7081 /* button_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B961B23EBB3001A7081 /* button_add@2x.png */; };
@@ -546,7 +546,7 @@
 		0AA06B8C1B23053E001A7081 /* CategoryHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryHeadView.xib; path = "分类V2/CategoryHeadView.xib"; sourceTree = "<group>"; };
 		0AA06B8E1B230587001A7081 /* CategoryBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryBottomView.h; path = "分类V2/CategoryBottomView.h"; sourceTree = "<group>"; };
 		0AA06B8F1B230587001A7081 /* CategoryBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryBottomView.m; path = "分类V2/CategoryBottomView.m"; sourceTree = "<group>"; };
-		0AA06B911B2305B4001A7081 /* CategoryBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryBottom.xib; path = "分类V2/CategoryBottom.xib"; sourceTree = "<group>"; };
+		0AA06B911B2305B4001A7081 /* CategoryBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryBottomView.xib; path = "分类V2/CategoryBottomView.xib"; sourceTree = "<group>"; };
 		0AA06B941B23EBB3001A7081 /* 椭圆-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-7@2x.png"; sourceTree = "<group>"; };
 		0AA06B951B23EBB3001A7081 /* 椭圆-7@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-7@3x.png"; sourceTree = "<group>"; };
 		0AA06B961B23EBB3001A7081 /* button_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_add@2x.png"; sourceTree = "<group>"; };
@@ -1220,7 +1220,7 @@
 				0AA06B861B2304BC001A7081 /* CategoryRightTableViewCell.xib */,
 				0AA06B8E1B230587001A7081 /* CategoryBottomView.h */,
 				0AA06B8F1B230587001A7081 /* CategoryBottomView.m */,
-				0AA06B911B2305B4001A7081 /* CategoryBottom.xib */,
+				0AA06B911B2305B4001A7081 /* CategoryBottomView.xib */,
 			);
 			name = "分类V2";
 			sourceTree = "<group>";
@@ -2543,7 +2543,7 @@
 				75AD584D1A38287200E39640 /* PasswordEditViewController.xib in Resources */,
 				75AD58421A38178C00E39640 /* MyAccountImageTableViewCell.xib in Resources */,
 				75FCABF11AC3D50A00C1368C /* logo_local@2x.png in Resources */,
-				0AA06B921B2305B4001A7081 /* CategoryBottom.xib in Resources */,
+				0AA06B921B2305B4001A7081 /* CategoryBottomView.xib in Resources */,
 				7533EED41A2E150A001D12D4 /* line_hon_1px_down.png in Resources */,
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
 				0AED7A851B1C450E00617B3C /* button_hot@2x.png in Resources */,

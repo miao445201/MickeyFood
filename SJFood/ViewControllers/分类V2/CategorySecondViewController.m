@@ -12,6 +12,7 @@
 #import "CategoryHeadView.h"
 #import "CategorySecondTableView.h"
 #import "CategorySecondSubView.h"
+#import "CategoryBottomView.h"
 
 #define kGetFoodCategoryDownloaderKey       @"GetFoodCategoryDownloaderKey"
 
@@ -62,8 +63,24 @@
     rect.origin.x = self.originX;
     rect.size.height = ScreenHeight - 104.f;
     rect.size.width = ScreenWidth - ctv.frame.size.width;
+    NSLog(@"%f",rect.size.width);
     ccv.frame = rect;
     [self.contentView addSubview:ccv];
+    
+    //加载BottomView
+    CategoryBottomView *ccc = [[[NSBundle mainBundle] loadNibNamed:@"CategoryBottomView" owner:self options:nil]lastObject];
+    rect = ccc.frame;
+    rect.origin.x = 0.0f;
+    rect.origin.y = ScreenHeight - 50;
+    rect.size.height = 50;
+    rect.size.width = ScreenWidth;
+    ccc.frame = rect;
+    [self.contentView addSubview:ccc];
+    
+    UIImageView *amountImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo_buy.png"]];
+    amountImage.frame = CGRectMake((ctv.frame.size.width - 56)/2, ScreenHeight - 68, 56, 56);
+    [self.contentView addSubview:amountImage];
+    
 }
 
 - (void)viewDidLoad {
@@ -76,6 +93,7 @@
     [bar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UIColor *NavColor = [UIColor colorWithRed:254/255.0 green:120/255.0 blue:114/255.0 alpha:1];
     [bar setBarTintColor:NavColor];
+    [self setRightNaviItemWithTitle:@"搜索" imageName:@"search.png"];
     self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
     if ([[CacheManager sharedManager] category]) {
         for (NSDictionary *valueDict in [[CacheManager sharedManager] category]) {

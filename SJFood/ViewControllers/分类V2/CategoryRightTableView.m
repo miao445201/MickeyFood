@@ -28,6 +28,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -40,6 +41,7 @@
 {
     static NSString *cellIdentity = @"CategoryRightTableViewCell";
     CategoryRightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentity];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     if (nil == cell)
     {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CategoryRightTableViewCell" owner:self options:nil];

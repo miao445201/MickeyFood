@@ -14,6 +14,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-Wi-9Yg">
                     <rect key="frame" x="0.0" y="64" width="375" height="40"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_hon_1px_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="hL3-SI-gag">
+                            <rect key="frame" x="0.0" y="39" width="375" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="tb0-Qf-fVU"/>
+                            </constraints>
+                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_ver_1px_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVy-0F-PfO">
                             <rect key="frame" x="124" y="8" width="1" height="24"/>
                             <constraints>
@@ -65,14 +71,17 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="pYT-px-ZsN" firstAttribute="width" secondItem="koM-Dd-JqF" secondAttribute="width" id="5G7-2w-SMN"/>
+                        <constraint firstAttribute="bottom" secondItem="hL3-SI-gag" secondAttribute="bottom" id="7sd-Et-yYT"/>
                         <constraint firstAttribute="bottom" secondItem="d5u-Kc-Uly" secondAttribute="bottom" constant="8" id="9tb-hb-kzO"/>
                         <constraint firstAttribute="height" constant="40" id="Cbk-bR-Zoe"/>
                         <constraint firstItem="pYT-px-ZsN" firstAttribute="height" secondItem="koM-Dd-JqF" secondAttribute="height" id="DBS-mb-PVP"/>
                         <constraint firstItem="pYT-px-ZsN" firstAttribute="width" secondItem="TRl-Xd-0yB" secondAttribute="width" id="F4y-1K-cFU"/>
                         <constraint firstAttribute="trailing" secondItem="koM-Dd-JqF" secondAttribute="trailing" constant="15" id="F7j-MA-It2"/>
                         <constraint firstItem="pYT-px-ZsN" firstAttribute="leading" secondItem="wSg-Wi-9Yg" secondAttribute="leading" constant="15" id="ImA-tO-g9B"/>
+                        <constraint firstAttribute="trailing" secondItem="hL3-SI-gag" secondAttribute="trailing" id="Lm4-WP-KkX"/>
                         <constraint firstAttribute="bottom" secondItem="TRl-Xd-0yB" secondAttribute="bottom" id="ORn-dx-Qg3"/>
                         <constraint firstItem="TRl-Xd-0yB" firstAttribute="leading" secondItem="yVy-0F-PfO" secondAttribute="trailing" constant="13" id="P7c-r9-Cjz"/>
+                        <constraint firstItem="hL3-SI-gag" firstAttribute="leading" secondItem="wSg-Wi-9Yg" secondAttribute="leading" id="QeD-dg-het"/>
                         <constraint firstAttribute="bottom" secondItem="pYT-px-ZsN" secondAttribute="bottom" id="SEx-2r-BLb"/>
                         <constraint firstItem="pYT-px-ZsN" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" id="Sbe-qz-E1x"/>
                         <constraint firstItem="TRl-Xd-0yB" firstAttribute="top" secondItem="wSg-Wi-9Yg" secondAttribute="top" id="TIt-iX-G8n"/>
@@ -104,6 +113,7 @@
     </objects>
     <resources>
         <image name="btn_food_sort_selected" width="2" height="149"/>
+        <image name="line_hon_1px_down.png" width="640" height="2"/>
         <image name="line_ver_1px_left.png" width="2" height="149"/>
         <image name="line_ver_1px_right.png" width="2" height="149"/>
     </resources>

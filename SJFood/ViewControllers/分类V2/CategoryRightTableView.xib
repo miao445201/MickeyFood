@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="295" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-9E-lfU">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-9E-lfU">
                     <rect key="frame" x="0.0" y="0.0" width="295" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -21,6 +21,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eaW-9E-lfU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6m5-ea-a4y"/>
+                <constraint firstAttribute="trailing" secondItem="eaW-9E-lfU" secondAttribute="trailing" id="8Na-1z-xxG"/>
+                <constraint firstAttribute="bottom" secondItem="eaW-9E-lfU" secondAttribute="bottom" id="d5l-RV-M9x"/>
+                <constraint firstItem="eaW-9E-lfU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dKe-xI-Nzj"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="rightTableView" destination="eaW-9E-lfU" id="7ig-iU-NeU"/>
