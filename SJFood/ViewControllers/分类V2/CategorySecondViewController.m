@@ -20,11 +20,12 @@
 @property (nonatomic, strong) NSMutableArray *categoryTableArray;
 @property (nonatomic, assign) CGFloat originX;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) UISearchBar *searchBar;
 
 @end
 
 @implementation CategorySecondViewController
-@synthesize categoryTableArray;
+@synthesize categoryTableArray,searchBar;
 
 #pragma mark - Private Methods
 - (void)loadSubViews
@@ -83,6 +84,34 @@
     
 }
 
+- (void)loadSearchBar
+{
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self;
+    [self.searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    //[self.searchBar sizeToFit];
+    self.searchBar.frame = CGRectMake(508, 60, 112, 23);
+    //[self.searchBar setImage:[UIImage imageNamed: @"search.png"] forSearchBarIcon:UISearchBarIconBookmark state:UIControlStateNormal];
+    [self.searchBar setBackgroundImage:[UIImage imageNamed: @"search.png"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    //self.searchBar.backgroundImage = [UIImage imageNamed: @"search.png"];
+    [self.searchBar setPlaceholder:@"搜索"];
+    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    UITextField *searchField = [self.searchBar valueForKey:@"_searchField"];
+    // Change search bar text color
+    UIColor *NavColor = [UIColor colorWithRed:254/255.0 green:120/255.0 blue:114/255.0 alpha:1];
+    searchField.textColor = NavColor;
+    // Change the search bar placeholder text color
+    [searchField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    // Change the search icon
+    UIImage *image = [UIImage imageNamed: @"logo_search.png"];
+    UIImageView *iView = [[UIImageView alloc] initWithImage:image];
+    iView.frame = CGRectMake(0, 0, 16, 16);
+    searchField.leftView  = iView;
+    UIBarButtonItem *navRight = [[UIBarButtonItem alloc] initWithCustomView:searchBar];
+    [[self navigationItem] setRightBarButtonItem:navRight];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -93,7 +122,7 @@
     [bar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UIColor *NavColor = [UIColor colorWithRed:254/255.0 green:120/255.0 blue:114/255.0 alpha:1];
     [bar setBarTintColor:NavColor];
-    [self setRightNaviItemWithTitle:@"搜索" imageName:@"search.png"];
+    //[self setRightNaviItemWithTitle:@"搜索" imageName:@"search.png"];
     self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
     if ([[CacheManager sharedManager] category]) {
         for (NSDictionary *valueDict in [[CacheManager sharedManager] category]) {
@@ -101,6 +130,7 @@
             [self.categoryTableArray addObject:fc];
         }
         [self loadSubViews];
+        [self loadSearchBar];
     } else {
         [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
     }
