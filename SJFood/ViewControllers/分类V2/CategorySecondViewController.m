@@ -18,6 +18,7 @@
 @interface CategorySecondViewController ()
 @property (nonatomic, strong) NSMutableArray *categoryTableArray;
 @property (nonatomic, assign) CGFloat originX;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -38,9 +39,9 @@
     rect.origin.y = 64.0f;
     rect.origin.x = 0.0f;
     rect.size.height = 40.f;
+    rect.size.width = ScreenWidth;
     ctc.frame = rect;
-    self.originX = ctc.frame.size.width;
-    [self.view addSubview:ctc];
+    [self.contentView addSubview:ctc];
     
     //加载UITableView
     CategorySecondTableView *ctv = [[[NSBundle mainBundle] loadNibNamed:@"CategorySecondTableView" owner:self options:nil] lastObject];
@@ -51,7 +52,7 @@
     [ctv reloadWithCategory:self.categoryTableArray];
     ctv.frame = rect;
     self.originX = ctv.frame.size.width;
-    [self.view addSubview:ctv];
+    [self.contentView addSubview:ctv];
     
     //加载UITableView
     //FoodCategory *fd = [self.categoryTableArray objectAtIndex:0];
@@ -62,7 +63,7 @@
     rect.size.height = ScreenHeight - 104.f;
     rect.size.width = ScreenWidth - ctv.frame.size.width;
     ccv.frame = rect;
-    [self.view addSubview:ccv];
+    [self.contentView addSubview:ccv];
 }
 
 - (void)viewDidLoad {
@@ -70,6 +71,11 @@
     // Do any additional setup after loading the view from its nib.
     //[self requestForGetFoodCategory];
     [self setNaviTitle:@"云便利店"];
+    UINavigationBar *bar = self.navigationController.navigationBar;
+    [self setLeftNaviItemWithTitle:nil imageName:@"button_back.png"];
+    [bar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    UIColor *NavColor = [UIColor colorWithRed:254/255.0 green:120/255.0 blue:114/255.0 alpha:1];
+    [bar setBarTintColor:NavColor];
     self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
     if ([[CacheManager sharedManager] category]) {
         for (NSDictionary *valueDict in [[CacheManager sharedManager] category]) {
