@@ -69,6 +69,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:kCategoryTableViewSelectedNotificaition object:[NSNumber numberWithInteger:indexPath.row]];
+
 }
 
 @end

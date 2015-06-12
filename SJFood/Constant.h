@@ -68,6 +68,7 @@
 #define kRefreshAccoutNotification          @"RefreshAccoutNotification"
 #define kRefreshAddressNotification         @"RefreshAddressNotification"
 #define kCategoryTableViewSelectedNotificaition     @"CategoryTableViewSelectedNotificaition"
+#define kCategoryDetailTableViewSelectedNotificaition @"CategoryDetailTableViewSelectedNotificaition"
 #define kShowFoodViewNotification           @"ShowFoodViewNotification"
 #define kFoodSearchNotification             @"FoodSearchNotification"
 #define kSpecChooseNotification             @"SpecChooseNotification"

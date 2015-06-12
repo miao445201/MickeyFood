@@ -7,21 +7,27 @@
 //
 
 #import "CategoryRightTableView.h"
-#import "FoodCategory.h"
 #import "CategoryRightTableViewCell.h"
+#import "FoodSelect.h"
+#import "FoodDetail.h"
+
+#define kCellReuseIdentify      @"CategoryRightTableViewCell"
+
 
 @interface CategoryRightTableView ()
-@property (nonatomic, strong) NSMutableArray *categoryTableArray;
-@property (nonatomic, strong) FoodCategory *foodCategory;
+@property (nonatomic, strong) NSMutableArray *foodArray;
+@property (nonatomic, strong) FoodSelect *foodSelect;
 @end
 
 @implementation CategoryRightTableView
 @synthesize rightTableView;
+@synthesize foodArray,foodSelect;
 
 #pragma mark - Public Methods
 - (void)reloadWithCategory:(NSMutableArray *)category
 {
-    
+    //self.foodArray = category;
+    //[self.rightTableView reloadData];
 }
 
 #pragma mark - UIView Methods
@@ -34,21 +40,20 @@
 #pragma mark - UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return self.foodArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentity = @"CategoryRightTableViewCell";
-    CategoryRightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentity];
+    CategoryRightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseIdentify];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    if (nil == cell)
-    {
-        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CategoryRightTableViewCell" owner:self options:nil];
-        cell = [nibs lastObject];
-    }
-    //self.foodCategory = [self.categoryTableArray objectAtIndex:indexPath.row];
-    [cell zeroSeparatorInset];
+//    self.foodSelect = [self.foodArray objectAtIndex:indexPath.row];
+//    cell.nameLabel.text = self.foodSelect.name;
+//    cell.priceLabel.text = self.foodSelect.price;
+//    cell.amountBuyer.text = self.foodSelect.saleNumber;
+//    cell.iconImage.cacheDir = kFoodIconCacheDir;
+//    [cell.iconImage aysnLoadImageWithUrl:self.foodSelect.imgUrl placeHolder:@"loading_square.png"];
+
     return cell;
 }
 
@@ -60,7 +65,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:kCategoryTableViewSelectedNotificaition object:[NSNumber numberWithInteger:indexPath.row]];
+//    FoodDetail *fcd = [self.foodArray objectAtIndex:indexPath.row];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kCategoryDetailTableViewSelectedNotificaition object:fcd.foodId];
 }
 
 @end

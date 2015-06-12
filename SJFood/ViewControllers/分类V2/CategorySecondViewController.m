@@ -13,21 +13,34 @@
 #import "CategorySecondTableView.h"
 #import "CategorySecondSubView.h"
 #import "CategoryBottomView.h"
+#import "FoodSelect.h"
+#import "FoodDetailViewController.h"
 
 #define kGetFoodCategoryDownloaderKey       @"GetFoodCategoryDownloaderKey"
+#define kFoodSearchDownloaderKey        @"FoodSearchDownloaderKey"
+#define kHomeFoodDownloaderKey          @"HomeFoodDownloaderKey"
+#define kLastIdInit             @"0"
+
 
 @interface CategorySecondViewController ()
 @property (nonatomic, strong) NSMutableArray *categoryTableArray;
 @property (nonatomic, assign) CGFloat originX;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) UISearchBar *searchBar;
+@property (nonatomic, strong)NSString *foodTag;
+@property (nonatomic, strong)NSMutableArray *foodArray;
+@property (nonatomic, strong)FoodSelect *food;
+@property (nonatomic, strong)NSString *lastestId;
+@property (nonatomic, strong)NSString *sort;
+
 
 @end
 
 @implementation CategorySecondViewController
-@synthesize categoryTableArray,searchBar;
+@synthesize categoryTableArray,searchBar,food,foodTag,foodArray;
+@synthesize sort,lastestId,contentView,originX;
 
-#pragma mark - Private Methods
+#pragma mark - loadView Methods
 - (void)loadSubViews
 {
     for (UIView *subView in self.view.subviews) {
@@ -57,7 +70,8 @@
     [self.contentView addSubview:ctv];
     
     //加载UITableView
-    //FoodCategory *fd = [self.categoryTableArray objectAtIndex:0];
+    FoodCategory *fd = [self.categoryTableArray objectAtIndex:0];
+    self.foodArray  = [NSMutableArray arrayWithArray:fd.child];
     CategoryRightTableView *ccv = [[[NSBundle mainBundle] loadNibNamed:@"CategoryRightTableView" owner:self options:nil] lastObject];
     rect = ccv.frame;
     rect.origin.y = 104.f;
@@ -65,6 +79,7 @@
     rect.size.height = ScreenHeight - 104.f;
     rect.size.width = ScreenWidth - ctv.frame.size.width;
     NSLog(@"%f",rect.size.width);
+    [ccv reloadWithCategory:foodArray];
     ccv.frame = rect;
     [self.contentView addSubview:ccv];
     
@@ -89,11 +104,8 @@
     self.searchBar = [[UISearchBar alloc] init];
     self.searchBar.delegate = self;
     [self.searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-    //[self.searchBar sizeToFit];
     self.searchBar.frame = CGRectMake(508, 60, 112, 23);
-    //[self.searchBar setImage:[UIImage imageNamed: @"search.png"] forSearchBarIcon:UISearchBarIconBookmark state:UIControlStateNormal];
     [self.searchBar setBackgroundImage:[UIImage imageNamed: @"search.png"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    //self.searchBar.backgroundImage = [UIImage imageNamed: @"search.png"];
     [self.searchBar setPlaceholder:@"搜索"];
     self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     UITextField *searchField = [self.searchBar valueForKey:@"_searchField"];
@@ -111,18 +123,29 @@
     [[self navigationItem] setRightBarButtonItem:navRight];
 }
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    //[self requestForGetFoodCategory];
+- (void) setNavMethods
+{
     [self setNaviTitle:@"云便利店"];
     UINavigationBar *bar = self.navigationController.navigationBar;
     [self setLeftNaviItemWithTitle:nil imageName:@"button_back.png"];
     [bar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UIColor *NavColor = [UIColor colorWithRed:254/255.0 green:120/255.0 blue:114/255.0 alpha:1];
     [bar setBarTintColor:NavColor];
-    //[self setRightNaviItemWithTitle:@"搜索" imageName:@"search.png"];
+
+}
+
+#pragma mark - UIViewController Methods
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    [self setNavMethods];
+    [self requestForGetFoodCategory];
     self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
     if ([[CacheManager sharedManager] category]) {
         for (NSDictionary *valueDict in [[CacheManager sharedManager] category]) {
@@ -136,23 +159,119 @@
     }
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(categoryTableViewSelected:) name:kCategoryTableViewSelectedNotificaition object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(categoryDetailTableViewSelected:) name:kCategoryDetailTableViewSelectedNotificaition object:nil];
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc
+{
+    [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Notification Methods
+- (void)categoryTableViewSelected:(NSNotification *)notification
+{
+    NSNumber *number = [notification object];
+    NSInteger index = [number integerValue];
+    FoodCategory *fd = [self.categoryTableArray objectAtIndex:index];
+    self.foodArray = [NSMutableArray arrayWithArray:fd.child];
+    // load collection view
+    for (UIView *subView in self.view.subviews) {
+        if ([subView isKindOfClass:[CategoryRightTableView class]]) {
+            [subView removeFromSuperview];
+        }
+    }
+    //加载UITableView
+    CategoryRightTableView *ccv = [[[NSBundle mainBundle] loadNibNamed:@"CategoryCollectionView" owner:self options:nil] lastObject];
+    CGRect rect = ccv.frame;
+    rect.origin.y = 64.f;
+    rect.origin.x = self.originX;
+    rect.size.height = ScreenHeight;
+    rect.size.width = ScreenWidth - 80.f;
+    [ccv reloadWithCategory:self.foodArray];
+    ccv.frame = rect;
+    [self.view addSubview:ccv];
 }
-*/
+
+- (void)categoryDetailTableViewSelected:(NSNotification *)notification
+{
+    FoodDetailViewController *foodDetailViewController = [[FoodDetailViewController alloc] initWithNibName:@"FoodDetailViewController" bundle:nil];
+    foodDetailViewController.foodId = notification.object;
+    [self.navigationController pushViewController:foodDetailViewController animated:YES];
+}
+#pragma request methods
+- (void)requestForFoodSearchWithCategoryId:(NSString *)category foodTag:(NSString *)tag sortId:(NSString *)sortId page:(NSString *)page
+{
+    if (category == nil)
+        category = @"";
+    if (tag == nil)
+        tag = @"";
+    if (sortId == nil)
+        sortId = @"0";
+    if (page == nil)
+        page = @"0";
+    self.lastestId = page;
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kFoodSearchUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:category forKey:@"categoryId"];
+    [dict setObject:tag forKey:@"foodTag"];
+    [dict setObject:sortId forKey:@"sortId"];
+    [dict setObject:page forKey:@"page"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kFoodSearchDownloaderKey];
+}
+
+- (void)requestForGetFoodCategory
+{
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kGetFoodCategoryUrl];
+    [[YFDownloaderManager sharedManager] requestDataByGetWithURLString:url
+                                                              delegate:self
+                                                               purpose:kGetFoodCategoryDownloaderKey];
+}
+
+#pragma mark - YFDownloaderDelegate Methods
+- (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData *)data
+{
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [str JSONValue];
+    if ([downloader.purpose isEqualToString:kGetFoodCategoryDownloaderKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
+            NSArray *valueArray = [dict objectForKey:@"foodFirstCategory"];
+            for (NSDictionary *valueDict in valueArray) {
+                FoodCategory *fc = [[FoodCategory alloc]initWithDict:valueDict];
+                [self.categoryTableArray addObject:fc];
+            }
+            [[CacheManager sharedManager] cacheCategoryWithArray:self.categoryTableArray];
+            [self loadSubViews];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"获取挑食信息失败";
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+}
+
+- (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message
+{
+    NSLog(@"%@",message);
+    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:kNetWorkErrorString hideDelay:2.f];
+}
 
 @end
